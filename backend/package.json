@@ -1,0 +1,25 @@
+{
+  "name": "campus-skillswap-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Lambda handlers, services and a local dev server for Campus SkillSwap",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node --watch local-server/server.js",
+    "start": "node local-server/server.js",
+    "test": "node --test",
+    "build:lambdas": "node scripts/build-lambdas.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.650.0",
+    "@aws-sdk/client-sns": "^3.650.0",
+    "@aws-sdk/lib-dynamodb": "^3.650.0"
+  },
+  "devDependencies": {
+    "adm-zip": "^0.5.16",
+    "cors": "^2.8.5",
+    "esbuild": "^0.23.1",
+    "express": "^4.21.0"
+  }
+}

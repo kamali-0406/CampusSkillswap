@@ -1,0 +1,14 @@
+{
+  "name": "campus-skillswap",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Campus SkillSwap - run frontend and local API together",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install && npm install",
+    "dev": "concurrently -n api,web -c yellow,cyan \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "test": "npm --prefix backend test",
+    "build": "npm --prefix frontend run build",
+    "build:lambdas": "npm --prefix backend run build:lambdas"
+  },
+  "devDependencies": { "concurrently": "^9.0.1" }
+}
