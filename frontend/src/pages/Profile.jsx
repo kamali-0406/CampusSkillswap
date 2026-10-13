@@ -66,7 +66,7 @@ export default function Profile() {
         ) : (
           <dl className="kv">
             <dt>Student ID</dt><dd>{profile.studentId || <span className="muted">Not added yet</span>}</dd>
-            <dt>User identifier</dt><dd><code>{profile.userId}</code></dd>
+            
             <dt>Bio</dt><dd>{profile.bio || <span className="muted">Add a short bio so classmates know who you are.</span>}</dd>
           </dl>
         )}
